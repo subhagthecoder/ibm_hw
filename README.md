@@ -1,3 +1,45 @@
+**My Notes**
+
+After discussing with Bart Vashaw, we decided to use Postman plugin from Chrome to provide an interface for the service APIs. The APIs is purely implemented in Java.
+
+Below are some sample inputs:
+* POST: http://localhost:8080/api/employees  
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+	<firstName>Subhag</firstName>
+	<lastName>Singh</lastName>
+	<hireDate>2019-11-11</hireDate>
+	<role>ceO</role>
+</employee>
+```
+
+* PUT: http://localhost:8080/api/employees/3613791231
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+	<lastName>Ragi</lastName>
+	<role>vP</role>
+</employee>
+```
+
+*Testing Done through Postman*
+1. Created employee A with role ceo.  
+1. Created employee B with role ceo and saw that a message was given that having more than one CEOs not allowed.
+1. Created employee B with role vP and the did a get for the same to see the role was stored as VP.
+1. Tried to employee A's role to an invalid role - xyz and noticed not allowed.
+1. Deleted employee A and was able to add a new employee C as role CEO.
+1. Called get all API and saw the employee list had A and C in there.
+1. Tried to set a hire date in future and saw that it is not allowed.  
+1. Updated last name of the employee A.
+1. Tried to update a record that does not exist and saw that it is not allowed.
+1. Tried to delete a record that does not exist and saw that it is not allowed.
+1. Tried to get an employee that does not exist (with invalid ID).
+
+
+
 **TASK**
 
 - Create a node app that implements a set of REST APIs allowing CRUD functionality for an employee resource.

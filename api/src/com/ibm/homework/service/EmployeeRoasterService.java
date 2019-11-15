@@ -4,6 +4,9 @@ import javax.ws.rs.core.Response;
 
 import com.ibm.homework.model.Employee;
 
+/**
+ * An interface for the EmployeeRoasterService.
+ */
 public interface EmployeeRoasterService {
 
     public Response addEmployee(Employee e);

@@ -8,9 +8,13 @@ import javax.ws.rs.core.Application;
 
 import com.ibm.homework.service.EmployeeRoasterServiceImpl;
 
+/**
+ * The main app class for the EmployeeRoasterService.
+ *
+ */
 @ApplicationPath("/api")
 public class EmployeeRoasterApplication extends Application {
-	
+
 	private Set<Object> singletons = new HashSet<Object>();
 
 	public EmployeeRoasterApplication() {

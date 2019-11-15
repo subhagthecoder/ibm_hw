@@ -1,15 +1,19 @@
 package com.ibm.homework.external;
 
+/**
+ * Quote fetcher class.
+ *
+ */
 public class QuoteTriviaFetcher extends AbstractTriviaFetcher {
-    private static final String QUOTE_SOURCE = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+	private static final String QUOTE_SOURCE = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
-    public QuoteTriviaFetcher() {
-	super(QUOTE_SOURCE);
-    }
+	public QuoteTriviaFetcher() {
+		super(QUOTE_SOURCE);
+	}
 
-    @Override
-    public String getTrivia() {
-	String trivia = fetchTrivia();
-	return trivia.substring(2, trivia.length() - 2);
-    }
+	@Override
+	public String getTrivia() {
+		String trivia = fetchTrivia();
+		return trivia.substring(2, trivia.length() - 2);
+	}
 }
